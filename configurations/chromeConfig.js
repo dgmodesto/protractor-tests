@@ -1,4 +1,4 @@
-const configCreator = require('../utils/configCreator');
+const configCreator = require('../utils/configCreator')
 
 module.exports.config = configCreator({
   capabilities: {
@@ -7,4 +7,5 @@ module.exports.config = configCreator({
       args: ['--headless']
     }
   }
-});
+  // chromeOnly: true,
+})
