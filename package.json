@@ -2,11 +2,10 @@
   "name": "protractor-project",
   "version": "1.0.0",
   "description": "Projeto para o curso de Protractor da Escola TAT",
-  "main": "index.js",
   "scripts": {
     "lint": "npx standard",
     "lint:fix": "npx standard --fix",
-    "pretest:github": "webdriver-manager update --versions.chrome 81.0.4044.138",
+    "pretest:github": "webdriver-manager update --versions.chrome 81.0.4044.69",
     "pretest:local": "node node_modules/protractor/bin/webdriver-manager update",
     "test": "npm run test:chrome && npm run test:firefox",
     "test:chrome": "protractor configurations/chromeConfig.js",
@@ -27,8 +26,12 @@
   "repository": {
     "type": "git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "protractor",
+    "test",
+    "e2e"
+  ],
+  "author": "Douglas Gomes Modesto",
   "license": "ISC",
   "devDependencies": {
     "chromedriver": "^83.0.0",
