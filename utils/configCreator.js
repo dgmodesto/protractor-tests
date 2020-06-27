@@ -9,7 +9,9 @@ module.exports = provideConfig => {
     // os testes devem ser independentes, os testes não precisam ser executados nas mesma ordem
     jasmineNodeOpts: {
       random: true
-    }
+    },
+    directConnect: true
+
   }
 
   return Object.assign(

@@ -1,12 +1,44 @@
 {
   "name": "protractor-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto para o curso de Protractor da Escola TAT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx standard",
+    "lint:fix": "npx standard --fix",
+    "pretest:local": "webdriver-manager update",
+    "pretest:github": "webdriver-manager update --versions.chrome 81.0.4044.138",
+    "test": "npm run test:chrome && npm run test:firefox",
+    "test:chrome": "protractor configurations/chromeConfig.js",
+    "test:firefox": "protractor configurations/firefoxConfig.js"
+  },
+  "standard": {
+    "globals": [
+      "browser",
+      "beforeAll",
+      "beforeEach",
+      "by",
+      "describe",
+      "element",
+      "expect",
+      "it"
+    ]
+  },
+  "repository": {
+    "type": "git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^83.0.0",
+    "faker": "^4.1.0",
+    "protractor": "^7.0.0",
+    "protractor-helper": "^4.1.9",
+    "standardjs": "^1.0.0-alpha"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "webdriver-manager": "^12.1.7"
+  }
 }

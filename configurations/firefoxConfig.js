@@ -1,10 +1,13 @@
-const configCreator = require('../utils/configCreator');
+const configCreator = require('../utils/configCreator')
 
 module.exports.config = configCreator({
   capabilities: {
     browserName: 'firefox',
     'moz:firefoxOptions': {
-      args: ['--headless']
+      // 'binary': '/opt/bin/firefox',
+      args: ['--headless'],
+      pageLoadStrategy: 'normal'
     }
-  }
-});
+  },
+  directConnect: true
+})
