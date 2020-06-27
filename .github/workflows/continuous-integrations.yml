@@ -1,4 +1,4 @@
-name: Lint and tests
+name: Lint and Tests
 on: push
 jobs:
   build:
@@ -13,5 +13,5 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: E2E tests
-        run: npm run pretest:github && npm tests
+        run: npm run pretest:github && npm test
   
